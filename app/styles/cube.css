@@ -47,11 +47,11 @@
 }
 
 .top {
-    -webkit-transform: rotateX(-90deg) translateZ(100px);
+    -webkit-transform: rotateX(90deg) translateZ(100px);
 }
 
 .bottom {
-    -webkit-transform: rotateX(90deg) translateZ(100px);
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
 }
 
 .front {
