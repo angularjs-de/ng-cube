@@ -15,10 +15,11 @@ describe("A CubeList-Controller", function () {
         $controller("CubeListCtrl", {$scope: scope});
     });
 
-    it("should create an array at scope.cubes", function () {
+    it("should create an empty array at scope.cubes", function () {
         var scope = $rootScope.$new;
         $controller("CubeListCtrl", {$scope: scope});
         expect(scope.cubes instanceof Array).toBeTruthy();
+        expect(scope.cubes.length).toBe(0);
     });
 
 });
