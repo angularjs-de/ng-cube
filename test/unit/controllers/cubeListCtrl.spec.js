@@ -29,5 +29,27 @@ describe("A CubeList-Controller", function () {
             expect(scope.addCube).toBeDefined();
             expect(scope.addCube instanceof Function).toBeTruthy();
         });
+
+        it("should append objects to the scope.cubes array", function () {
+            var testObject,
+                scope = $rootScope.$new;
+            $controller("CubeListCtrl", {$scope: scope});
+            expect(scope.cubes.length).toBe(0);
+
+            testObject = {};
+            scope.addCube(testObject)
+
+            expect(scope.cubes.length).toBe(1);
+            expect(scope.cubes[0]).toBe(testObject);
+
+            scope.addCube({});
+            scope.addCube({});
+            scope.addCube({});
+            scope.addCube({});
+
+            expect(scope.cubes.length).toBe(5);
+            expect(scope.cubes[0]).toBe(testObject);
+        });
     });
+
 });
