@@ -4,6 +4,10 @@ angular.module("cubeApp")
             .when("/", {
                 templateUrl: "views/landing.html"
             })
+            .when("/:tag", {
+                controller: "singleTagCube",
+                templateUrl: "views/singleTagCube.html"
+            })
             .otherwise({
                 redirectTo: "/"
             });
