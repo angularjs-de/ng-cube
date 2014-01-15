@@ -3,10 +3,12 @@ angular.module("cubeApp")
     return {
         restrict: "E",
         templateUrl: "views/cube.html",
+        controller: "cubeCtrl",
         scope: {
-            "x" : "@initX",
-            "y" : "@initY",
-            "z" : "@initZ"
+            x : "@initX",
+            y : "@initY",
+            z : "@initZ",
+            tags : "@"
         }
     };
 });

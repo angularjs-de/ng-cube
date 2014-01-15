@@ -32,6 +32,7 @@
     color: rgba(0, 0, 0, 0.5);
     font-family: sans-serif;
     text-transform: uppercase;
+    background-size: 200px 200px;
 }
 
 .back {
