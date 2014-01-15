@@ -11,7 +11,6 @@ angular.module("cubeApp")
 
         this.$get = function ($http) {
             var getPhotosFn = function (tag) {
-                var tags = tag || "party";
                 return $http.get("http://api.flickr.com/services/rest/", {
                     params: {
                         method: "flickr.photos.search",
@@ -19,7 +18,7 @@ angular.module("cubeApp")
                         format: "json",
                         nojsoncallback: 1,
                         per_page: "6",
-                        tags: tags,
+                        tags: tag,
                         page: Math.floor(Math.random() * 20 + 1)
                     }
                 })
