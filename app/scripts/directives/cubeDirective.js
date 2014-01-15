@@ -8,7 +8,7 @@ angular.module("cubeApp")
             x : "@initX",
             y : "@initY",
             z : "@initZ",
-            tags : "@"
+            tag : "@"
         }
     };
 });
