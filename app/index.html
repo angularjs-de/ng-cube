@@ -5,22 +5,15 @@
     <link href="styles/cube.css" media="all" rel="stylesheet">
 </head>
 <body>
-<cube init-x="5" init-y="26" init-z="101" tag="party"></cube>
-<cube init-x="100" init-y="56" init-z="110" tag="starwars"></cube>
-<cube init-x="54" init-y="136" init-z="130"></cube>
-<cube init-x="59" init-y="156" init-z="40"></cube>
-<cube init-x="115" init-y="236" init-z="50"></cube>
-<cube init-x="235" init-y="16" init-z="60"></cube>
-<cube init-x="135" init-y="26" init-z="70"></cube>
-<cube init-x="45" init-y="63" init-z="90"></cube>
+<section ng-view></section>
 
 <script src="lib/angular/angular.js"></script>
-<script src="lib/angular-resource/angular-resource.js"></script>
 <script src="lib/angular-route/angular-route.js"></script>
 <script src="scripts/module.js"></script>
 <script src="scripts/directives/cubeDirective.js"></script>
 <script src="scripts/services/flickrService.js"></script>
 <script src="scripts/controllers/cubeCtrl.js"></script>
 <script src="scripts/configs/flickrConfig.js"></script>
+<script src="scripts/configs/routeConfig.js"></script>
 </body>
 </html>
