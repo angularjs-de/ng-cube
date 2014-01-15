@@ -1,8 +1,15 @@
 angular.module("cubeApp")
     .provider("flickr", function () {
-        this.$get = function ($http) {
+        var API_KEY;
 
-            var API_KEY = "4e0e99bf242015aee01bffea1efff314";
+        this.apiKey = function (apiKey) {
+            if (apiKey) {
+                API_KEY = apiKey;
+            }
+            return apiKey;
+        };
+
+        this.$get = function ($http) {
             var getPhotosFn = function (tag) {
                 var tags = tag || "party";
                 return $http.get("http://api.flickr.com/services/rest/", {
