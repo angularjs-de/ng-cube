@@ -16,8 +16,10 @@ module.exports = function(config) {
     files: [
       'test/lib/jquery/jquery.js',
       'app/lib/angular/angular.js',
+      'app/lib/angular-route/angular-route.js',
       'test/lib/angular-mocks/angular-mocks.js',
       'app/scripts/**/module.js',
+      'app/scripts/services/*.js',
       'app/scripts/**/*.js',
       'test/unit/**/*.js',
       'app/**/*.html'
