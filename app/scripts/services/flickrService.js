@@ -18,7 +18,8 @@ angular.module("cubeApp")
                         format: "json",
                         nojsoncallback: 1,
                         per_page: "6",
-                        tags: tag
+                        tags: tag,
+                        tag_mode: "all"
                     }
                 })
                     .then(function (response) {
