@@ -35,7 +35,9 @@ angular.module("cubeApp")
 
             // Public API
             return {
-                getPhotos: getPhotosFn
+                getPhotos: function (tag) {
+                    return getPhotosFn(tag);
+                }
             };
         }
     });
