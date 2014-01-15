@@ -22,4 +22,13 @@ describe("A CubeList-Controller", function () {
         expect(scope.cubes.length).toBe(0);
     });
 
+    it("should define a scope.addCube function", function () {
+        var scope = $rootScope.$new;
+        $controller("CubeListCtrl", {$scope: scope});
+        expect(scope.addCube).toBeDefined();
+        expect(scope.addCube instanceof Function).toBeTruthy();
+    });
+
+
+
 });
