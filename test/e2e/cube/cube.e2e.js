@@ -60,9 +60,9 @@ describe("A initial project", function () {
         expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(true);
       });
 
-    var cubeDirective = element(by.repeater('cube in cubes').row(0));
+    var listElement = element(by.repeater('cube in cubes').row(0));
 
-    cubeDirective.findElement(by.css(".removeCube")).click()
+    listElement.findElement(by.css(".removeCube")).click()
       .then(function () {
         expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
       });
