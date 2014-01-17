@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="cubeApp">
+<head>
+    <title>Cube</title>
+    <link href="styles/cube.css" media="all" rel="stylesheet">
+</head>
+<body ng-controller="CubeListCtrl">
+<cube ng-repeat="cube in cubes" init-x="{{cube.x}}" init-y="{{cube.y}}" init-z="{{cube.z}}"></cube>
+
+
+<script src="lib/angular/angular.js"></script>
+<script src="scripts/module.js"></script>
+<script src="scripts/directives/cubeDirective.js"></script>
+<script src="scripts/controllers/cubeListCtrl.js"></script>
+</body>
+</html>
