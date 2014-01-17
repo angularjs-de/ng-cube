@@ -24,4 +24,52 @@ describe("A initial project", function () {
     expect(button.getAttribute("ng-click")).toBe("addCube(x,y,z)");
   });
 
+
+  it("should add a cube on button.addCube click", function () {
+    var addButton = element(by.css("button.addCube"));
+    element.all(by.repeater('cube in cubes'))
+      .then(function (rows) {
+        expect(rows.length).toBe(0);
+      });
+    addButton.click()
+      .then(function () {
+        return element.all(by.repeater('cube in cubes'));
+      })
+      .then(function (rows) {
+        expect(rows.length).toBe(1);
+      });
+  });
+
+  it("should add a cube on button.addCube click", function () {
+    var addButton = element(by.css("button.addCube"));
+    expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
+
+    addButton.click()
+      .then(function () {
+        expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(true);
+      });
+  });
+
+
+  iit("should add a cube on button.addCube click", function () {
+    var addButton = element(by.css("button.addCube"));
+    expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
+
+    addButton.click()
+      .then(function () {
+        expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(true);
+      });
+
+    var cubeDirective = element(by.repeater('cube in cubes').row(0));
+
+    expect(cubeDirective).toBeDefined();
+
+    cubeDirective.findElement(by.css(".removeCube")).click()
+      .then(function () {
+        expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
+      });
+
+
+  });
+
 });
