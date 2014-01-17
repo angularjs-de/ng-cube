@@ -62,8 +62,6 @@ describe("A initial project", function () {
 
     var cubeDirective = element(by.repeater('cube in cubes').row(0));
 
-    expect(cubeDirective).toBeDefined();
-
     cubeDirective.findElement(by.css(".removeCube")).click()
       .then(function () {
         expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
