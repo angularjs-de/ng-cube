@@ -17,4 +17,23 @@ describe("A Flickr-Service", function () {
   }));
 
 
+  describe("getPhotosByTag method", function () {
+
+    var flickrService;
+
+    beforeEach(inject(function (flickr) {
+      flickrService = flickr;
+    }));
+
+    it("should be defined", function () {
+      expect(flickrService.getPhotosByTag).toBeDefined();
+    });
+
+    it("should be a function", function () {
+      expect(flickrService.getPhotosByTag instanceof Function).toBe(true);
+    });
+
+  });
+
+
 });

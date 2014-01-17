@@ -3,5 +3,8 @@ angular.module("cubeApp")
 
     // Public API
     return {
+      getPhotosByTag: function () {
+
+      }
     };
   });
