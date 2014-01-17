@@ -1,6 +1,10 @@
 describe("A Flickr-Service", function () {
 
+  var $httpBackend;
   beforeEach(module('cubeApp'));
+  beforeEach(inject(function (_$httpBackend_) {
+    $httpBackend = _$httpBackend_;
+  }));
 
   it("should exist", inject(function ($injector) {
 
