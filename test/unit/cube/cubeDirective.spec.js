@@ -105,7 +105,7 @@ describe("A Cube-Directive", function () {
   });
 
 
-  it("should define a tag attribute", inject(function ($q,flickr) {
+  it("should define a tag attribute", inject(function ($q, flickr) {
 
     spyOn(flickr, "getPhotosByTag").andReturn($q.when());
 
@@ -123,6 +123,81 @@ describe("A Cube-Directive", function () {
 
     expect(scopeA.tag).toBe("abc123");
     expect(scopeB.tag).toBe(scope.tag);
+
+
+  }));
+
+
+  it("should set response images to cube ", inject(function ($httpBackend, $q, flickr) {
+
+    var flickrResponse = {
+      photos: {
+        photo: [
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "1",
+            secret: "SECRET"
+          },
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "2",
+            secret: "SECRET"
+          },
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "3",
+            secret: "SECRET"
+          },
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "4",
+            secret: "SECRET"
+          },
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "5",
+            secret: "SECRET"
+          },
+          {
+            farm: "FARM",
+            server: "SERVER",
+            id: "6",
+            secret: "SECRET"
+          }
+        ]
+      }
+    };
+    $httpBackend
+        .when('GET', new RegExp('http\\:\\/\\/api\\.flickr\\.com\\/services\\/rest\/[a-zA-Z0-9^?^=^&^.^_]*'))
+        .respond(flickrResponse);
+
+    var scope = $rootScope.$new();
+    scope.tag = "exampleTag";
+
+    var element = $compile('<cube tag="abc123"></cube>')(scope);
+
+    $httpBackend.flush();
+    $rootScope.$apply();
+
+    var cubeA = element,
+        scopeA = angular.element(cubeA.children()).scope();
+
+    console.log(scopeA.img);
+    expect(scopeA.img instanceof Array).toBe(true);
+    expect(scopeA.img.length).toBe(6);
+
+    var checkStyle = 'background-image: url(http://farmFARM.staticflickr.com/SERVER/%ID%_SECRET.jpg)';
+    expect(element.find('div.front').attr("style")).toBe(checkStyle.replace("%ID%",1));
+    expect(element.find('div.back').attr("style")).toBe(checkStyle.replace("%ID%",2));
+    expect(element.find('div.top').attr("style")).toBe(checkStyle.replace("%ID%",3));
+    expect(element.find('div.bottom').attr("style")).toBe(checkStyle.replace("%ID%",4));
+    expect(element.find('div.left').attr("style")).toBe(checkStyle.replace("%ID%",5));
+    expect(element.find('div.right').attr("style")).toBe(checkStyle.replace("%ID%",6));
 
 
   }));
