@@ -1,23 +1,7 @@
-describe("A FlickrServiceProvider", function () {
-
-  var exampleApiKey = "MyPublicApiKey";
-  beforeEach(module('cubeApp', function (flickrProvider) {
-    flickrProvider.apiKey(exampleApiKey);
-  }));
-
-  it("should set apiKey via provider", inject(function (flickr) {
-    expect(flickr.getApiKey()).toBe(exampleApiKey);
-  }));
-
-});
-
-
 describe("A FlickrService", function () {
 
   var $httpBackend;
-  beforeEach(module('cubeApp', function (flickrProvider) {
-    flickrProvider.apiKey("API_KEY");
-  }));
+  beforeEach(module('cubeApp'));
 
   beforeEach(inject(function (_$httpBackend_) {
     $httpBackend = _$httpBackend_;
