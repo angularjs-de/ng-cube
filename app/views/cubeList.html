@@ -13,6 +13,7 @@
         <li ng-repeat="cube in cubes">
             <cube init-x="{{cube.x}}" init-y="{{cube.y}}" init-z="{{cube.z}}" tag="{{cube.tag}}"></cube>
             <button class="removeCube" ng-click="removeCube($index)">remove this cube</button>
+            <a ng-href="#/{{cube.tag}}" target="_blank">Open {{cube.tag}} in a new window</a>
         </li>
     </ul>
 </section>

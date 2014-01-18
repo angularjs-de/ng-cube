@@ -58,3 +58,30 @@
 .front {
     -webkit-transform: translateZ(100px);
 }
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateX(359deg) rotateY(359deg);
+    }
+}
+
+.center {
+    margin: 0 auto;
+    width: 500px
+}
+
+.center h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rotate .cube {
+    -webkit-animation: rotation 5s infinite linear;
+}
+
+.rotate .inputs {
+    display: none;
+}
