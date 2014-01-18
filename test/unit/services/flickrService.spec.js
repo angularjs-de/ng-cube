@@ -153,8 +153,6 @@ describe("A FlickrService", function () {
           .replace("{id}", flickrResponse.photos.photo[0].id)
           .replace("{secret}", flickrResponse.photos.photo[0].secret);
 
-      console.log("imgUrl: "+imgUrl);
-      console.log("responseArray[0]: "+responseArray[0]);
       expect(imgUrl).toBe(responseArray[0]);
     });
 
