@@ -21,7 +21,7 @@ describe("A initial project", function () {
 
   it("should contain a button-element with binding addCube", function () {
     var button = element(by.css("button.addCube"));
-    expect(button.getAttribute("ng-click")).toBe("addCube(x,y,z)");
+    expect(button.getAttribute("ng-click")).toBe("addCube(x,y,z,tag)");
   });
 
 
