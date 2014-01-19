@@ -1,4 +1,4 @@
-describe("A initial project", function () {
+describe("A CubeList View", function () {
 
   var webServerUrl = 'http://localhost:8080/';
   beforeEach(function () {
