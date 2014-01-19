@@ -51,7 +51,7 @@ describe("A initial project", function () {
   });
 
 
-  it("should add a cube on button.addCube click", function () {
+  it("should remove a cube on button.removeCube click", function () {
     var addButton = element(by.css("button.addCube"));
     expect(element(by.repeater('cube in cubes').row(0)).isPresent()).toBe(false);
 
