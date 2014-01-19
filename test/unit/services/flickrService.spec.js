@@ -73,7 +73,6 @@ describe("A FlickrService", function () {
     }));
 
     beforeEach(function () {
-      console.log(basisRegex + '[a-zA-Z0-9^?^=^&^.^_]*');
       $httpBackend.when('GET', new RegExp(basisRegex + '[a-zA-Z0-9^?^=^&^.^_]*')).respond(flickrResponse);
     });
 
