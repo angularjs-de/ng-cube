@@ -1,0 +1,19 @@
+<div class="cube-container">
+    <div>
+        X: <input type="range" min="0" max="360" step="1" ng-model="x"/>
+        Y: <input type="range" min="0" max="360" step="1" ng-model="y"/>
+        Z: <input type="range" min="0" max="360" step="1" ng-model="z"/>
+    </div>
+
+    <div class="perspective">
+        <div class="cube"
+             style="-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotate({{z}}deg)">
+            <div class="front">front</div>
+            <div class="back">back</div>
+            <div class="top">top</div>
+            <div class="bottom">bottom</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </div>
+</div>
