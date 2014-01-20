@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="cubeApp">
+<head>
+    <title>Cube</title>
+    <link href="styles/cube.css" media="all" rel="stylesheet">
+</head>
+<body ng-controller="CubeListCtrl">
+<h1>Cubes</h1>
+<header>
+    <h2>Add new Cube</h2>
+    <input type="range" ng-model="x" min="0" max="360" step="1"/>
+    <input type="range" ng-model="y" min="0" max="360" step="1"/>
+    <input type="range" ng-model="z" min="0" max="360" step="1"/>
+    <button class="addCube" ng-click="addCube(x,y,z)">add Cube</button>
+</header>
+<section>
+    <h2>Cube List ({{cubes.length}})</h2>
+    <ul>
+        <li ng-repeat="cube in cubes">
+            <cube init-x="{{cube.x}}" init-y="{{cube.y}}" init-z="{{cube.z}}"></cube>
+            <button class="removeCube" ng-click="removeCube($index)">remove this cube</button>
+        </li>
+    </ul>
+</section>
+
+
+<script src="lib/angular/angular.js"></script>
+<script src="scripts/module.js"></script>
+<script src="scripts/directives/cubeDirective.js"></script>
+<script src="scripts/controllers/cubeListCtrl.js"></script>
+</body>
+</html>
