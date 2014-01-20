@@ -1,0 +1,19 @@
+<h1>Cubes</h1>
+<header ng-init="x=0;y=0;z=0">
+    <h2>Add new Cube</h2>
+    <input type="range" ng-model="x" min="0" max="360" step="1"/>
+    <input type="range" ng-model="y" min="0" max="360" step="1"/>
+    <input type="range" ng-model="z" min="0" max="360" step="1"/>
+    <input type="text" ng-model="tag" placeholder="Tags (comma-separated)"/>
+    <button class="addCube" ng-click="addCube(x,y,z,tag)">add Cube</button>
+</header>
+<section>
+    <h2>Cube List ({{cubes.length}})</h2>
+    <ul>
+        <li ng-repeat="cube in cubes">
+            <cube init-x="{{cube.x}}" init-y="{{cube.y}}" init-z="{{cube.z}}" tag="{{cube.tag}}"></cube>
+            <button class="removeCube" ng-click="removeCube($index)">remove this cube</button>
+            <a ng-href="#/{{cube.tag}}" target="_blank">Open {{cube.tag}} in a new window</a>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,19 @@
+<div class="cube-container">
+    <div class="inputs">
+        X: <input type="range" min="0" max="360" step="1" ng-model="x"/>
+        Y: <input type="range" min="0" max="360" step="1" ng-model="y"/>
+        Z: <input type="range" min="0" max="360" step="1" ng-model="z"/>
+    </div>
+
+    <div class="perspective">
+        <div class="cube"
+             style="-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotate({{z}}deg)">
+            <div class="front" style="background-image: url({{img[0]}})">front</div>
+            <div class="back" style="background-image: url({{img[1]}})">back</div>
+            <div class="top" style="background-image: url({{img[2]}})">top</div>
+            <div class="bottom" style="background-image: url({{img[3]}})">bottom</div>
+            <div class="left" style="background-image: url({{img[4]}})">left</div>
+            <div class="right" style="background-image: url({{img[5]}})">right</div>
+        </div>
+    </div>
+</div>
