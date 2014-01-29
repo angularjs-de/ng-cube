@@ -1,1 +1,1 @@
-angular.module('cubeApp',[]);
+angular.module('angularjsde.cube',[]);

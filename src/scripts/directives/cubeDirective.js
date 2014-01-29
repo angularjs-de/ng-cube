@@ -1,4 +1,4 @@
-angular.module("cubeApp")
+angular.module("angularjsde.cube")
   .directive("cube", function (flickr) {
     return {
       restrict: "E",

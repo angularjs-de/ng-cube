@@ -1,6 +1,6 @@
 "use strict";
 
-angular.module("cubeApp")
+angular.module("angularjsde.cube")
   .provider("flickr", function () {
     var API_KEY;
 

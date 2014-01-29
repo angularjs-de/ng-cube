@@ -1,6 +1,6 @@
 describe("A Cube-Directive", function () {
 
-  beforeEach(module('cubeApp'));
+  beforeEach(module('angularjsde.cube'));
 
   beforeEach(inject(function (_$compile_, _$rootScope_) {
     $compile = _$compile_;
@@ -187,7 +187,6 @@ describe("A Cube-Directive", function () {
     var cubeA = element,
         scopeA = angular.element(cubeA.children()).scope();
 
-    console.log(scopeA.img);
     expect(scopeA.img instanceof Array).toBe(true);
     expect(scopeA.img.length).toBe(6);
 

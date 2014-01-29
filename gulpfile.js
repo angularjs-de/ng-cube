@@ -18,7 +18,7 @@ gulp.task('default', ['html2js', 'styles'], function () {
 gulp.task('html2js', ['clean'], function () {
   return gulp.src('./src/**/*.html')
       .pipe(ngHtml2Js({
-        moduleName: 'cubeApp',
+        moduleName: 'angularjsde.cube',
         prefix: '/src'
       }))
       .pipe(gulp.dest('./dist'));
