@@ -1,7 +1,7 @@
 {
   "name": "ng-cube",
   "version": "0.0.1",
-  "homepage": "https://github.com/robinboehm/java-mag-angularjs-article",
+  "homepage": "https://github.com/angularjs-de/ng-cube",
   "authors": [
     "Robin Böhm <robinboehm@googlemail.com>"
   ],
@@ -17,10 +17,17 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "src",
+    "gulpfile.js",
+    "karma.conf.js",
+    "karma.conf.js",
+    "package.json"
   ],
   "dependencies": {
-    "angular": "~1.2.10",
+    "angular": "~1.2"
+  },
+  "devDependencies": {
     "jQuery": "~2.1.0",
     "angular-mocks": "~1.2.10"
   }

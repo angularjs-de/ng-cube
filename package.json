@@ -1,7 +1,7 @@
 {
-  "name": "jm0314",
+  "name": "ngCube",
   "version": "0.0.1",
-  "description": "Examples for the article",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "pretest": "http-server app/ & echo $! > pid",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/angularjs-de/jm0314.git"
+    "url": "git://github.com/angularjs-de/ng-cube.git"
   },
   "keywords": [
     "angularjs",
@@ -20,7 +20,7 @@
   "author": "Robin Böhm, Philipp Tarasiewicz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angularjs-de/jm0314/issues"
+    "url": "https://github.com/angularjs-de/ng-cube/issues"
   },
   "devDependencies": {
     "karma": "0.10.8",
