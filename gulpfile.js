@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var clean = require('gulp-clean');
 
 gulp.task('default', ['html2js', 'styles'], function () {
-  return gulp.src(['./src/**/*.js', './dist/views/*.js'])
+  return gulp.src(['./src/scripts/module.js', './src/scripts/services/**/*.js','./src/**/*.js', './dist/views/*.js'])
       .pipe(ngmin())
       .pipe(concat('ngcube.js'))
       .pipe(gulp.dest('./'))
