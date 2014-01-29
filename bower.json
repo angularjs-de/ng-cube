@@ -22,7 +22,8 @@
     "src",
     "gulpfile.js",
     "karma.conf.js",
-    "package.json"
+    "package.json",
+    "cube-demo.png"
   ],
   "dependencies": {
     "angular": "~1.2"
