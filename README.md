@@ -13,3 +13,7 @@ angular.module("angularjsde.cube")
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angularjs-de/jm0314/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angularjs-de/ng-cube/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
