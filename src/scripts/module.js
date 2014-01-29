@@ -1,1 +1,1 @@
-angular.module('cubeApp',['ngRoute']);
+angular.module('cubeApp',[]);

@@ -20,7 +20,7 @@ module.exports = function(config) {
       'src/scripts/**/module.js',
       'src/scripts/services/*.js',
       'src/scripts/**/*.js',
-      'test/unit/**/*.js',
+      'test/**/*.js',
       'src/**/*.html'
     ],
 
@@ -73,11 +73,11 @@ module.exports = function(config) {
     singleRun: true,
 
     preprocessors: {
-        'app/**/*.html': 'ng-html2js'
+        'src/**/*.html': 'ng-html2js'
       },
 
     ngHtml2JsPreprocessor: {
-        stripPrefix: 'app/',
+        stripPrefix: 'src/',
         moduleName: 'templates'
     }
   });
