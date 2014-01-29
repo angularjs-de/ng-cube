@@ -1,6 +1,6 @@
 ng-cube
 ======
-[![Build Status](https://travis-ci.org/angularjs-de/java-mag-angularjs-article.png)](https://travis-ci.org/angularjs-de/java-mag-angularjs-article)
+[![Build Status](https://travis-ci.org/angularjs-de/ng-cube.png)](https://travis-ci.org/angularjs-de/ng-cube)
 
 
 ```js
