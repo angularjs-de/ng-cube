@@ -2,13 +2,13 @@ ng-cube
 ======
 [![Build Status](https://travis-ci.org/angularjs-de/ng-cube.png)](https://travis-ci.org/angularjs-de/ng-cube)
 
-This is an project based on an example for an german (http://angularjs-de.github.io/java-mag-angularjs-article/)[article].
+This is an project based on an example for an german [article](http://angularjs-de.github.io/java-mag-angularjs-article/).
 
 ![](cube-demo.png)
 
 ## Demo
 
-(http://angularjs-de.github.io/java-mag-angularjs-article/examples/cube11/#/fire,heat)[View Demo]
+[View Demo](http://angularjs-de.github.io/java-mag-angularjs-article/examples/cube11/#/fire,heat)
 
 
 ## Usage
@@ -51,7 +51,7 @@ angular.module("cubeApp")
 ```
 
 ## Config
-You'll need an (http://www.flickr.com/services/api/misc.api_keys.html)[API Key].
+You'll need an [API Key](http://www.flickr.com/services/api/misc.api_keys.html).
 ```js
 angular.module("angularjsde.cube")
     .config(function (flickrProvider) {
@@ -61,7 +61,7 @@ angular.module("angularjsde.cube")
 
 ## Contact
 
-(https://twitter.com/angularjs_de)[Twitter]
+[Twitter](https://twitter.com/angularjs_de)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/angularjs-de/ng-cube/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
