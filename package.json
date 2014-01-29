@@ -28,6 +28,7 @@
     "karma-ng-html2js-preprocessor": "0.1.0",
     "gulp-util": "~2.2.13",
     "gulp": "~3.5.0",
-    "gulp-ng-html2js": "~0.1.4"
+    "gulp-ng-html2js": "~0.1.4",
+    "gulp-ngmin": "~0.1.2"
   }
 }
