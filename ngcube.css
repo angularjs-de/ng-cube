@@ -1,0 +1,87 @@
+.cube-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: inline-block
+}
+
+.perspective {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    -webkit-perspective: 800px;
+    -webkit-perspective-origin: -50% -50%;
+}
+
+.cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    -webkit-transform-style: preserve-3d;
+}
+
+.cube div {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 80px rgba(125, 125, 125, 1.0);
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background-size: 200px 200px;
+}
+
+.back {
+    -webkit-transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+    -webkit-transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+}
+
+.front {
+    -webkit-transform: translateZ(100px);
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateX(359deg) rotateY(359deg);
+    }
+}
+
+.center {
+    margin: 0 auto;
+    width: 500px
+}
+
+.center h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.rotate .cube {
+    -webkit-animation: rotation 5s infinite linear;
+}
+
+.rotate .inputs {
+    display: none;
+}
