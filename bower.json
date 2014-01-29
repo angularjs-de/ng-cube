@@ -12,6 +12,7 @@
     "flickr"
   ],
   "license": "MIT",
+  "main": "./ngcube.js",
   "ignore": [
     "**/.*",
     "node_modules",
