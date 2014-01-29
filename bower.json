@@ -22,7 +22,6 @@
     "src",
     "gulpfile.js",
     "karma.conf.js",
-    "karma.conf.js",
     "package.json"
   ],
   "dependencies": {
